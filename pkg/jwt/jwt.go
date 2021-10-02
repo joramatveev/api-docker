@@ -22,7 +22,7 @@ func NewJWTService() (*JWTService, error) {
 	return &JWTService{keys: keys}, nil
 }
 
-func (j *JWTService) GenerateJWT(u User) (string, error) {
+func (j *JWTService) GenerateJWT(email string) (string, error) {
 	return auth.ForgeToken("empty", u.Email, "empty", 0, j.keys.PrivateKey, nil)
 }
 
