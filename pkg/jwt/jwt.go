@@ -1,4 +1,4 @@
-package main
+package jwt
 
 import (
 	"github.com/openware/rango/pkg/auth"
