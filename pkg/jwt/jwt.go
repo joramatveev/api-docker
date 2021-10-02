@@ -23,7 +23,7 @@ func NewJWTService() (*JWTService, error) {
 }
 
 func (j *JWTService) GenerateJWT(email string) (string, error) {
-	return auth.ForgeToken("empty", u.Email, "empty", 0, j.keys.PrivateKey, nil)
+	return auth.ForgeToken("empty", email, "empty", 0, j.keys.PrivateKey, nil)
 }
 
 func (j *JWTService) ParseJWT(jwt string) (auth.Auth, error) {
